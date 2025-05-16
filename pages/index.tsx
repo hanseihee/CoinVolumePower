@@ -48,7 +48,7 @@ export default function Home() {
         setMarketList(krwMarkets);
         // 최초 4개만 기본 선택
         setMarkets(krwMarkets.slice(0, 10).map(m => m.market));
-      } catch {
+      } catch { 
         setMarketList([]);
       } finally {
         setLoadingMarkets(false); 

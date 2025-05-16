@@ -65,7 +65,7 @@ export default function Home() {
     const ws = new WebSocket('wss://api.upbit.com/websocket/v1');
     wsRef.current = ws;
     // 버퍼 초기화
-    setTradeBuffers(markets.reduce((acc, m) => { acc[m] = []; return acc; }, {}));
+    setTradeBuffers(markets.reduce((acc, m) => { acc[m] = []; return acc; }, {} as Record<string, TradeTick[]>));
     ws.onopen = () => {
       ws.send(
         JSON.stringify([

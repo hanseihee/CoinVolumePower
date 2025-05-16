@@ -118,7 +118,7 @@ export default function Home() {
     let timer: NodeJS.Timeout;
     async function fetchTicker() {
       try {
-        const url = 'https://api.upbit.com/v1/ticker?markets=' + markets.join(',');
+        const url = '/api/upbit-ticker?markets=' + markets.join(',');
         const res = await fetch(url);
         const data = await res.json();
         const map: Record<string, TickerInfo> = {};

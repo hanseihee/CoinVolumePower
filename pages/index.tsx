@@ -51,7 +51,7 @@ export default function Home() {
       } catch {
         setMarketList([]);
       } finally {
-        setLoadingMarkets(false);
+        setLoadingMarkets(false); 
       }
     }
     fetchMarkets();
